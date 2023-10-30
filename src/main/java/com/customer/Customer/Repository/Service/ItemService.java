@@ -28,6 +28,8 @@ public class ItemService {
 		return itemRepository.save(item);
 	}
 	
+	
+	
 	public Item updateItem(Item item) {
 		return itemRepository.save(item);
 	}
@@ -38,5 +40,13 @@ public class ItemService {
 
 	public List<Item> findAll() {
 		return itemRepository.findAll();
+	}
+	
+	public List<Item> getDiscountedProducts(){
+		itemRepository.applyDiscountToProducts();
+		List<Item> discountedProducts = itemRepository.findByItemcostGreaterThan(150);
+        return discountedProducts;
+	
+		
 	}
 }

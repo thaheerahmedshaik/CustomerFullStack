@@ -21,6 +21,16 @@ public class Item {
 	private String itemquality;
 	
 	private String itemQuanity;
+	
+	private String imageUrl;
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 
 	public long getItemno() {
 		return itemno;
@@ -62,13 +72,14 @@ public class Item {
 		this.itemQuanity = itemQuanity;
 	}
 
-	public Item(long itemno, String itemname, double itemcost, String itemquality, String itemQuanity) {
+	public Item(long itemno, String itemname, double itemcost, String itemquality, String itemQuanity,String imageUrl) {
 		super();
 		this.itemno = itemno;
 		this.itemname = itemname;
 		this.itemcost = itemcost;
 		this.itemquality = itemquality;
 		this.itemQuanity = itemQuanity;
+		this.imageUrl=imageUrl;
 	}
 	
 	public Item() {
@@ -78,8 +89,10 @@ public class Item {
 	@Override
 	public String toString() {
 		return "Item [itemno=" + itemno + ", itemname=" + itemname + ", itemcost=" + itemcost + ", itemquality="
-				+ itemquality + ", itemQuanity=" + itemQuanity + "]";
+				+ itemquality + ", itemQuanity=" + itemQuanity + ", imageUrl=" + imageUrl + "]";
 	}
+
+
 
 
 	

@@ -22,6 +22,8 @@ private String custemail;
 @Column(updatable = false,nullable = false)
 private String custid;
 
+
+
 private String email;
 
 private String itemname;
